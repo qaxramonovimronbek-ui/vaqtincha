@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Animation</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <h1>Heart Animation</h1>
+
+    <!-- Heart -->
+    <div class="heart-box">
+        <svg class="heart" viewBox="0 0 200 180">
+            <path
+                d="M100 165
+                   C90 150 25 115 25 60
+                   C25 20 75 10 100 45
+                   C125 10 175 20 175 60
+                   C175 115 110 150 100 165Z">
+            </path>
+        </svg>
+    </div>
+
+    <p class="comment">
+        Comment <span>"Heart"</span> for Code
+    </p>
+
+
+    <!-- Code box -->
+    <div class="code-box">
+
+        <div class="top-bar">
+            <span class="red"></span>
+            <span class="yellow"></span>
+            <span class="green"></span>
+
+            <b>CSS</b>
+            <strong>style.css</strong>
+        </div>
+
+        <pre><code>
+<span class="selector">body</span> {
+    <span class="property">background</span>: black;
+    <span class="property">color</span>: #fff;
+    <span class="property">font-family</span>: "Arial Black", sans-serif;
+    <span class="property">font-size</span>: 3em;
+    <span class="property">text-align</span>: center;
+    <span class="property">scrollbar-width</span>: none;
+}
+
+<span class="selector">.heart</span> {
+    <span class="property">fill</span>: red;
+    <span class="property">position</span>: relative;
+    <span class="property">top</span>: 5px;
+    <span class="property">width</span>: 50px;
+    <span class="property">animation</span>: pulse 1s ease infinite;
+}
+        </code></pre>
+
+    </div>
+
+</body>
+</html>

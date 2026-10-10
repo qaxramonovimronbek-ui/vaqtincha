@@ -1,0 +1,299 @@
+* {
+     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: white;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    padding-top: 60px;
+}
+
+
+/* =====================
+   TITLE
+===================== */
+
+h1 {
+    color: #ffd000;
+
+    font-size: 32px;
+    font-weight: 500;
+
+    margin-bottom: 35px;
+
+    text-align: center;
+}
+
+
+/* =====================
+   HEART BOX
+===================== */
+
+.heart-box {
+    width: 500px;
+    height: 235px;
+
+    border: 2px solid #a800ff;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow:
+        0 0 5px #a800ff,
+        inset 0 0 5px #31003f;
+}
+
+
+/* =====================
+   HEART
+===================== */
+
+.heart {
+    width: 150px;
+    height: 150px;
+
+    overflow: visible;
+
+    filter:
+        drop-shadow(0 0 5px #ff0080)
+        drop-shadow(0 0 12px #a000ff);
+
+    animation: pulse 1.2s ease-in-out infinite;
+}
+
+.heart path {
+    fill: none;
+
+    stroke: #ff0080;
+
+    stroke-width: 2;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+
+    animation:
+        drawHeart 3s ease forwards,
+        heartGlow 1.2s ease-in-out infinite;
+}
+
+
+/* Heart drawing */
+
+@keyframes drawHeart {
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/* Heart pulse */
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Glow */
+
+@keyframes heartGlow {
+
+    0% {
+        filter:
+            drop-shadow(0 0 3px #ff0080);
+    }
+
+    50% {
+        filter:
+            drop-shadow(0 0 15px #ff0080)
+            drop-shadow(0 0 25px #a000ff);
+    }
+
+    100% {
+        filter:
+            drop-shadow(0 0 3px #ff0080);
+    }
+}
+
+
+/* =====================
+   COMMENT TEXT
+===================== */
+
+.comment {
+    margin-top: 25px;
+
+    font-size: 22px;
+
+    color: #eee;
+}
+
+.comment span {
+    color: #ffd000;
+}
+
+
+/* =====================
+   CODE BOX
+===================== */
+
+.code-box {
+    width: 500px;
+
+    margin-top: 20px;
+
+    background: #050511;
+
+    border: 2px solid #a000ff;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 8px #7c00ff,
+        0 0 20px rgba(130, 0, 255, .25);
+}
+
+
+/* Top bar */
+
+.top-bar {
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 10px;
+
+    border-bottom: 1px solid #222;
+
+    color: #ddd;
+
+    font-size: 11px;
+}
+
+.top-bar span {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    margin-right: 6px;
+}
+
+.red {
+    background: #ff3150;
+}
+
+.yellow {
+    background: #ffd000;
+}
+
+.green {
+    background: #00d86b;
+}
+
+.top-bar b {
+    color: #ffd000;
+
+    margin-left: 10px;
+
+    font-size: 9px;
+}
+
+.top-bar strong {
+    margin-left: 8px;
+
+    font-weight: normal;
+}
+
+
+/* Code */
+
+pre {
+    padding: 15px;
+
+    text-align: left;
+
+    overflow-x: auto;
+}
+
+code {
+    color: #ddd;
+
+    font-family: monospace;
+
+    font-size: 12px;
+
+    line-height: 1.55;
+}
+
+.selector {
+    color: #00eaff;
+}
+
+.property {
+    color: #ff72d2;
+}
+
+
+/* =====================
+   MOBILE
+===================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding-top: 35px;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .heart-box {
+        width: 90%;
+        height: 220px;
+    }
+
+    .code-box {
+        width: 90%;
+    }
+
+    .comment {
+        font-size: 18px;
+    }
+
+    code {
+        font-size: 10px;
+    }
+}
